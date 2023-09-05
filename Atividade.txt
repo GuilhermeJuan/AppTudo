@@ -1,0 +1,29 @@
+1)
+Acesse o back4app e crie um novo aplicativo chamado AppTodo.
+
+2)
+Agora abra seu projeto React-Native e instale o Parse.
+	npm install parse @react-native-async-storage/async-storage --save
+	npm install react-native-paper
+	
+2)
+Adicione a seguinte configuração em sua App.js
+
+	import Parse from "parse/react-native.js";
+	import AsyncStorage from '@react-native-async-storage/async-storage';
+
+	Parse.setAsyncStorage(AsyncStorage);
+
+	**OBS: Na Dashboard do back4app, vá até: App Settings -> Security & Keys: Copie a Application ID e JavaScript key para colar na linha abaixo.**
+
+	Parse.initialize('YOUR_APPLICATION_ID_HERE','YOUR_JAVASCRIPT_KEY_HERE');
+	Parse.serverURL = 'https://parseapi.back4app.com/';
+
+
+3)
+No link abaixo terá acesso a documentação de como finalizar a criação do app
+	https://www.back4app.com/docs/react-native/parse-sdk/data-objects/react-native-crud-tutorial
+	
+	
+export const TodoList = () => {
+export default function App(){
